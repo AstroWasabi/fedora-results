@@ -9,40 +9,40 @@
 │  Vendor:         Dell Inc.                               │
 │  Virtualized:    NO (bare metal)                         │
 │  Logical Cores:  12                                      │
-│  Timestamp:      2026-09-28T19:57:00+0900                │
+│  Timestamp:      2026-09-28T20:21:42+0900                │
 │  Exported:       host_profile.json                       │
 └───────────────────────────────────────────────────────────┘
 
 [Engine] Pre-warmed worker pool initialised (Core 1 pinned)
 
 ┌─── Core Affinity Verification (boot-time) ───────────────┐
-│  Main Thread   → TID: 2068487  CPU Core: 0                │
-│  Worker Thread → TID: 2068489  CPU Core: 1                │
+│  Main Thread   → TID: 2203060  CPU Core: 0                │
+│  Worker Thread → TID: 2203062  CPU Core: 1                │
 │  Pinning:        ✔ VERIFIED (Core 0 ↔ Core 1)        │
 └───────────────────────────────────────────────────────────┘
 
 ═══════════════════════════════════════════════════════════════
   Cipher Suite:    Hybrid: X25519 + ML-KEM-768
-  Adaptive Route:  Sequential
+  Adaptive Route:  Parallel
   Iterations:      1000
   Role:            SERVER (ECDH_Derive || ML_KEM_Encapsulate)
 ═══════════════════════════════════════════════════════════════
 
-  [Strict_Sequential] Running 1000 iterations... done (mean: 0.2611 ms)
-  [Strict_Parallel] Running 1000 iterations... done (mean: 0.1913 ms)
-  [Adaptive_Switch] Running 1000 iterations... done (mean: 0.2248 ms)
+  [Strict_Sequential] Running 1000 iterations... done (mean: 0.2274 ms)
+  [Strict_Parallel] Running 1000 iterations... done (mean: 0.1918 ms)
+  [Adaptive_Switch] Running 1000 iterations... done (mean: 0.1919 ms)
 
 ### Hybrid: X25519 + ML-KEM-768 — Latency Distribution (ms)
 
 | Mode               | Mean       | p50        | p95        | p99        |
 |:-------------------|:-----------|:-----------|:-----------|:-----------|
-| Strict_Sequential  |     0.2611 |     0.2204 |     0.3606 |     0.3966 |
-| Strict_Parallel    |     0.1913 |     0.1900 |     0.1961 |     0.2031 |
-| Adaptive_Switch    |     0.2248 |     0.2192 |     0.2271 |     0.3849 |
+| Strict_Sequential  |     0.2274 |     0.2201 |     0.2337 |     0.3592 |
+| Strict_Parallel    |     0.1918 |     0.1905 |     0.1965 |     0.2044 |
+| Adaptive_Switch    |     0.1919 |     0.1906 |     0.1963 |     0.2028 |
 
 ─── Live Affinity Verification (during parallel exec) ──────
-  Main Thread   → TID: 2068487   CPU Core: 0
-  Worker Thread → TID: 2068489   CPU Core: 1
+  Main Thread   → TID: 2203060   CPU Core: 0
+  Worker Thread → TID: 2203062   CPU Core: 1
   Status:         ✔ VERIFIED — Core 0 ↔ Core 1 pinning active
 ────────────────────────────────────────────────────────────
 
@@ -53,21 +53,21 @@
   Role:            SERVER (ECDH_Derive || ML_KEM_Encapsulate)
 ═══════════════════════════════════════════════════════════════
 
-  [Strict_Sequential] Running 1000 iterations... done (mean: 0.2965 ms)
-  [Strict_Parallel] Running 1000 iterations... done (mean: 0.2676 ms)
-  [Adaptive_Switch] Running 1000 iterations... done (mean: 0.2712 ms)
+  [Strict_Sequential] Running 1000 iterations... done (mean: 0.2969 ms)
+  [Strict_Parallel] Running 1000 iterations... done (mean: 0.2688 ms)
+  [Adaptive_Switch] Running 1000 iterations... done (mean: 0.2706 ms)
 
 ### Hybrid: SecP256r1 + ML-KEM-768 — Latency Distribution (ms)
 
 | Mode               | Mean       | p50        | p95        | p99        |
 |:-------------------|:-----------|:-----------|:-----------|:-----------|
-| Strict_Sequential  |     0.2965 |     0.2918 |     0.3082 |     0.4278 |
-| Strict_Parallel    |     0.2676 |     0.2650 |     0.2754 |     0.2901 |
-| Adaptive_Switch    |     0.2712 |     0.2657 |     0.2817 |     0.3661 |
+| Strict_Sequential  |     0.2969 |     0.2922 |     0.3087 |     0.4175 |
+| Strict_Parallel    |     0.2688 |     0.2652 |     0.2844 |     0.3130 |
+| Adaptive_Switch    |     0.2706 |     0.2653 |     0.2837 |     0.3770 |
 
 ─── Live Affinity Verification (during parallel exec) ──────
-  Main Thread   → TID: 2068487   CPU Core: 0
-  Worker Thread → TID: 2068489   CPU Core: 1
+  Main Thread   → TID: 2203060   CPU Core: 0
+  Worker Thread → TID: 2203062   CPU Core: 1
   Status:         ✔ VERIFIED — Core 0 ↔ Core 1 pinning active
 ────────────────────────────────────────────────────────────
 
@@ -78,21 +78,21 @@
   Role:            SERVER (ECDH_Derive || ML_KEM_Encapsulate)
 ═══════════════════════════════════════════════════════════════
 
-  [Strict_Sequential] Running 1000 iterations... done (mean: 1.7643 ms)
-  [Strict_Parallel] Running 1000 iterations... done (mean: 1.7393 ms)
-  [Adaptive_Switch] Running 1000 iterations... done (mean: 1.7371 ms)
+  [Strict_Sequential] Running 1000 iterations... done (mean: 1.7590 ms)
+  [Strict_Parallel] Running 1000 iterations... done (mean: 1.7153 ms)
+  [Adaptive_Switch] Running 1000 iterations... done (mean: 1.7182 ms)
 
 ### Hybrid: SecP384r1 + ML-KEM-1024 — Latency Distribution (ms)
 
 | Mode               | Mean       | p50        | p95        | p99        |
 |:-------------------|:-----------|:-----------|:-----------|:-----------|
-| Strict_Sequential  |     1.7643 |     1.7483 |     1.7948 |     2.3013 |
-| Strict_Parallel    |     1.7393 |     1.7059 |     1.7468 |     2.9514 |
-| Adaptive_Switch    |     1.7371 |     1.7068 |     1.7505 |     2.1131 |
+| Strict_Sequential  |     1.7590 |     1.7486 |     1.7810 |     1.9152 |
+| Strict_Parallel    |     1.7153 |     1.7057 |     1.7361 |     1.8751 |
+| Adaptive_Switch    |     1.7182 |     1.7059 |     1.7357 |     1.8736 |
 
 ─── Live Affinity Verification (during parallel exec) ──────
-  Main Thread   → TID: 2068487   CPU Core: 0
-  Worker Thread → TID: 2068489   CPU Core: 1
+  Main Thread   → TID: 2203060   CPU Core: 0
+  Worker Thread → TID: 2203062   CPU Core: 1
   Status:         ✔ VERIFIED — Core 0 ↔ Core 1 pinning active
 ────────────────────────────────────────────────────────────
 
@@ -103,21 +103,21 @@
   Role:            SERVER (ECDH_Derive || ML_KEM_Encapsulate)
 ═══════════════════════════════════════════════════════════════
 
-  [Strict_Sequential] Running 1000 iterations... done (mean: 6.1129 ms)
-  [Strict_Parallel] Running 1000 iterations... done (mean: 4.4472 ms)
-  [Adaptive_Switch] Running 1000 iterations... done (mean: 4.4614 ms)
+  [Strict_Sequential] Running 1000 iterations... done (mean: 6.0036 ms)
+  [Strict_Parallel] Running 1000 iterations... done (mean: 4.4376 ms)
+  [Adaptive_Switch] Running 1000 iterations... done (mean: 4.4444 ms)
 
 ### Hybrid: SecP384r1 + FrodoKEM-1344 — Latency Distribution (ms)
 
 | Mode               | Mean       | p50        | p95        | p99        |
 |:-------------------|:-----------|:-----------|:-----------|:-----------|
-| Strict_Sequential  |     6.1129 |     6.0590 |     6.2250 |     6.9082 |
-| Strict_Parallel    |     4.4472 |     4.4170 |     4.5263 |     5.0249 |
-| Adaptive_Switch    |     4.4614 |     4.4153 |     4.6181 |     5.5983 |
+| Strict_Sequential  |     6.0036 |     5.9727 |     6.1387 |     6.5542 |
+| Strict_Parallel    |     4.4376 |     4.4201 |     4.5250 |     4.8430 |
+| Adaptive_Switch    |     4.4444 |     4.4189 |     4.5330 |     4.9283 |
 
 ─── Live Affinity Verification (during parallel exec) ──────
-  Main Thread   → TID: 2068487   CPU Core: 0
-  Worker Thread → TID: 2068489   CPU Core: 1
+  Main Thread   → TID: 2203060   CPU Core: 0
+  Worker Thread → TID: 2203062   CPU Core: 1
   Status:         ✔ VERIFIED — Core 0 ↔ Core 1 pinning active
 ────────────────────────────────────────────────────────────
 
@@ -128,21 +128,21 @@
   Role:            SERVER (ECDH_Derive || ML_KEM_Encapsulate)
 ═══════════════════════════════════════════════════════════════
 
-  [Strict_Sequential] Running 1000 iterations... done (mean: 4.2430 ms)
-  [Strict_Parallel] Running 1000 iterations... done (mean: 2.6010 ms)
-  [Adaptive_Switch] Running 1000 iterations... done (mean: 2.5961 ms)
+  [Strict_Sequential] Running 1000 iterations... done (mean: 4.2566 ms)
+  [Strict_Parallel] Running 1000 iterations... done (mean: 2.5973 ms)
+  [Adaptive_Switch] Running 1000 iterations... done (mean: 2.5954 ms)
 
 ### Hybrid: SecP384r1 + BIKE-L5 — Latency Distribution (ms)
 
 | Mode               | Mean       | p50        | p95        | p99        |
 |:-------------------|:-----------|:-----------|:-----------|:-----------|
-| Strict_Sequential  |     4.2430 |     4.2195 |     4.3223 |     4.8336 |
-| Strict_Parallel    |     2.6010 |     2.5849 |     2.6270 |     3.0088 |
-| Adaptive_Switch    |     2.5961 |     2.5841 |     2.6556 |     2.8664 |
+| Strict_Sequential  |     4.2566 |     4.2335 |     4.3544 |     4.8773 |
+| Strict_Parallel    |     2.5973 |     2.5811 |     2.6469 |     2.9920 |
+| Adaptive_Switch    |     2.5954 |     2.5826 |     2.6441 |     3.0092 |
 
 ─── Live Affinity Verification (during parallel exec) ──────
-  Main Thread   → TID: 2068487   CPU Core: 0
-  Worker Thread → TID: 2068489   CPU Core: 1
+  Main Thread   → TID: 2203060   CPU Core: 0
+  Worker Thread → TID: 2203062   CPU Core: 1
   Status:         ✔ VERIFIED — Core 0 ↔ Core 1 pinning active
 ────────────────────────────────────────────────────────────
 
