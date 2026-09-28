@@ -1,0 +1,111 @@
+
+═══════════════════════════════════════════════════════════════
+  End-to-End TLS 1.3 Hybrid PQC Benchmark
+  Adaptive Dispatch Runtime — Network Handshake Edition
+═══════════════════════════════════════════════════════════════
+  Server:     127.0.0.1:4444
+  Iterations: 1000
+  KDF:        sha256
+═══════════════════════════════════════════════════════════════
+
+[Client] Hostname: fedora | Cores: 12 | VM: NO
+
+═══════════════════════════════════════════════════════════════
+  Cipher Suite:     Hybrid: X25519 + ML-KEM-768
+  KDF:              sha256
+  Adaptive Route:   Sequential
+  Iterations:       1000
+═══════════════════════════════════════════════════════════════
+
+  [Strict_Sequential] Running 1000 handshakes... done (mean: 2.4994 ms)
+  [Strict_Parallel] Running 1000 handshakes... done (mean: 2.5853 ms)
+  [Adaptive_Switch] Running 1000 handshakes... done (mean: 2.4949 ms)
+
+### Hybrid: X25519 + ML-KEM-768 — E2E Latency Distribution (ms)
+
+| Mode               | Mean       | p50        | p95        | p99        |
+|:-------------------|:-----------|:-----------|:-----------|:-----------|
+| Strict_Sequential  |     2.4994 |     2.4874 |     2.5597 |     3.0800 |
+| Strict_Parallel    |     2.5853 |     2.5635 |     2.7390 |     3.7095 |
+| Adaptive_Switch    |     2.4949 |     2.4741 |     2.5728 |     2.8432 |
+
+═══════════════════════════════════════════════════════════════
+  Cipher Suite:     Hybrid: SecP256r1 + ML-KEM-768
+  KDF:              sha256
+  Adaptive Route:   Parallel
+  Iterations:       1000
+═══════════════════════════════════════════════════════════════
+
+  [Strict_Sequential] Running 1000 handshakes... done (mean: 2.9666 ms)
+  [Strict_Parallel] Running 1000 handshakes... done (mean: 2.9863 ms)
+  [Adaptive_Switch] Running 1000 handshakes... done (mean: 2.9968 ms)
+
+### Hybrid: SecP256r1 + ML-KEM-768 — E2E Latency Distribution (ms)
+
+| Mode               | Mean       | p50        | p95        | p99        |
+|:-------------------|:-----------|:-----------|:-----------|:-----------|
+| Strict_Sequential  |     2.9666 |     2.9112 |     3.0959 |     3.8114 |
+| Strict_Parallel    |     2.9863 |     2.9557 |     3.1565 |     3.7768 |
+| Adaptive_Switch    |     2.9968 |     2.9521 |     3.4533 |     3.9879 |
+
+═══════════════════════════════════════════════════════════════
+  Cipher Suite:     Hybrid: SecP384r1 + ML-KEM-1024
+  KDF:              sha256
+  Adaptive Route:   Parallel
+  Iterations:       1000
+═══════════════════════════════════════════════════════════════
+
+  [Strict_Sequential] Running 1000 handshakes... done (mean: 6.2232 ms)
+  [Strict_Parallel] Running 1000 handshakes... done (mean: 6.2038 ms)
+  [Adaptive_Switch] Running 1000 handshakes... done (mean: 6.1809 ms)
+
+### Hybrid: SecP384r1 + ML-KEM-1024 — E2E Latency Distribution (ms)
+
+| Mode               | Mean       | p50        | p95        | p99        |
+|:-------------------|:-----------|:-----------|:-----------|:-----------|
+| Strict_Sequential  |     6.2232 |     6.1421 |     6.6212 |     8.3556 |
+| Strict_Parallel    |     6.2038 |     6.1269 |     6.6408 |     8.1300 |
+| Adaptive_Switch    |     6.1809 |     6.1209 |     6.4429 |     7.7178 |
+
+═══════════════════════════════════════════════════════════════
+  Cipher Suite:     Hybrid: SecP384r1 + FrodoKEM-1344
+  KDF:              sha256
+  Adaptive Route:   Parallel
+  Iterations:       1000
+═══════════════════════════════════════════════════════════════
+
+  [Strict_Sequential] Running 1000 handshakes... done (mean: 41.6763 ms)
+  [Strict_Parallel] Running 1000 handshakes... done (mean: 40.6804 ms)
+  [Adaptive_Switch] Running 1000 handshakes... done (mean: 40.7403 ms)
+
+### Hybrid: SecP384r1 + FrodoKEM-1344 — E2E Latency Distribution (ms)
+
+| Mode               | Mean       | p50        | p95        | p99        |
+|:-------------------|:-----------|:-----------|:-----------|:-----------|
+| Strict_Sequential  |    41.6763 |    41.3041 |    42.8331 |    49.9795 |
+| Strict_Parallel    |    40.6804 |    40.1861 |    41.8529 |    51.7727 |
+| Adaptive_Switch    |    40.7403 |    40.2691 |    41.8113 |    50.9481 |
+
+═══════════════════════════════════════════════════════════════
+  Cipher Suite:     Hybrid: SecP384r1 + BIKE-L5
+  KDF:              sha256
+  Adaptive Route:   Parallel
+  Iterations:       1000
+═══════════════════════════════════════════════════════════════
+
+  [Strict_Sequential] Running 1000 handshakes... done (mean: 21.3744 ms)
+  [Strict_Parallel] Running 1000 handshakes... done (mean: 21.2886 ms)
+  [Adaptive_Switch] Running 1000 handshakes... done (mean: 21.4496 ms)
+
+### Hybrid: SecP384r1 + BIKE-L5 — E2E Latency Distribution (ms)
+
+| Mode               | Mean       | p50        | p95        | p99        |
+|:-------------------|:-----------|:-----------|:-----------|:-----------|
+| Strict_Sequential  |    21.3744 |    21.2064 |    21.9255 |    23.1958 |
+| Strict_Parallel    |    21.2886 |    21.1425 |    21.8698 |    23.6276 |
+| Adaptive_Switch    |    21.4496 |    21.1622 |    22.3022 |    28.1202 |
+
+[✔] Results exported → e2e_benchmark_results.json
+
+[✔] End-to-end benchmark complete.
+
