@@ -2,121 +2,121 @@
   {
     "cipher_suite": "Hybrid: X25519 + ML-KEM-768",
     "mode": "Strict_Sequential",
-    "mean_ms": 2.504832,
-    "p50_ms": 2.484627,
-    "p95_ms": 2.637978,
-    "p99_ms": 3.096064
+    "mean_ms": 0.477784,
+    "p50_ms": 0.465830,
+    "p95_ms": 0.500433,
+    "p99_ms": 0.661232
   },
   {
     "cipher_suite": "Hybrid: X25519 + ML-KEM-768",
     "mode": "Strict_Parallel",
-    "mean_ms": 2.586001,
-    "p50_ms": 2.556330,
-    "p95_ms": 2.762493,
-    "p99_ms": 3.236704
+    "mean_ms": 0.577735,
+    "p50_ms": 0.574211,
+    "p95_ms": 0.623798,
+    "p99_ms": 0.731632
   },
   {
     "cipher_suite": "Hybrid: X25519 + ML-KEM-768",
     "mode": "Adaptive_Switch",
-    "mean_ms": 2.573367,
-    "p50_ms": 2.555189,
-    "p95_ms": 2.747540,
-    "p99_ms": 3.369944
+    "mean_ms": 0.561734,
+    "p50_ms": 0.563028,
+    "p95_ms": 0.606937,
+    "p99_ms": 0.634809
   },
   {
     "cipher_suite": "Hybrid: SecP256r1 + ML-KEM-768",
     "mode": "Strict_Sequential",
-    "mean_ms": 3.001754,
-    "p50_ms": 2.933998,
-    "p95_ms": 3.610447,
-    "p99_ms": 4.300568
+    "mean_ms": 0.932955,
+    "p50_ms": 0.915627,
+    "p95_ms": 0.998217,
+    "p99_ms": 1.444906
   },
   {
     "cipher_suite": "Hybrid: SecP256r1 + ML-KEM-768",
     "mode": "Strict_Parallel",
-    "mean_ms": 2.980794,
-    "p50_ms": 2.953856,
-    "p95_ms": 3.179071,
-    "p99_ms": 3.706898
+    "mean_ms": 0.938063,
+    "p50_ms": 0.918720,
+    "p95_ms": 1.010128,
+    "p99_ms": 1.490690
   },
   {
     "cipher_suite": "Hybrid: SecP256r1 + ML-KEM-768",
     "mode": "Adaptive_Switch",
-    "mean_ms": 2.972508,
-    "p50_ms": 2.926840,
-    "p95_ms": 3.094332,
-    "p99_ms": 4.311462
+    "mean_ms": 0.920744,
+    "p50_ms": 0.917488,
+    "p95_ms": 0.979057,
+    "p99_ms": 1.000605
   },
   {
     "cipher_suite": "Hybrid: SecP384r1 + ML-KEM-1024",
     "mode": "Strict_Sequential",
-    "mean_ms": 6.231611,
-    "p50_ms": 6.142593,
-    "p95_ms": 6.662348,
-    "p99_ms": 8.305676
+    "mean_ms": 3.520567,
+    "p50_ms": 3.482729,
+    "p95_ms": 3.606155,
+    "p99_ms": 4.915749
   },
   {
     "cipher_suite": "Hybrid: SecP384r1 + ML-KEM-1024",
     "mode": "Strict_Parallel",
-    "mean_ms": 6.204408,
-    "p50_ms": 6.129719,
-    "p95_ms": 6.594229,
-    "p99_ms": 8.024656
+    "mean_ms": 3.485271,
+    "p50_ms": 3.493309,
+    "p95_ms": 3.571922,
+    "p99_ms": 3.905563
   },
   {
     "cipher_suite": "Hybrid: SecP384r1 + ML-KEM-1024",
     "mode": "Adaptive_Switch",
-    "mean_ms": 6.205095,
-    "p50_ms": 6.126787,
-    "p95_ms": 6.624142,
-    "p99_ms": 8.098753
+    "mean_ms": 3.490768,
+    "p50_ms": 3.494081,
+    "p95_ms": 3.606833,
+    "p99_ms": 3.887840
   },
   {
     "cipher_suite": "Hybrid: SecP384r1 + FrodoKEM-1344",
     "mode": "Strict_Sequential",
-    "mean_ms": 41.759252,
-    "p50_ms": 41.381725,
-    "p95_ms": 42.862816,
-    "p99_ms": 51.850914
+    "mean_ms": 10.380742,
+    "p50_ms": 10.340244,
+    "p95_ms": 10.701838,
+    "p99_ms": 11.037436
   },
   {
     "cipher_suite": "Hybrid: SecP384r1 + FrodoKEM-1344",
     "mode": "Strict_Parallel",
-    "mean_ms": 40.620978,
-    "p50_ms": 40.240196,
-    "p95_ms": 41.749092,
-    "p99_ms": 48.970898
+    "mean_ms": 9.313176,
+    "p50_ms": 9.263237,
+    "p95_ms": 9.676027,
+    "p99_ms": 10.228119
   },
   {
     "cipher_suite": "Hybrid: SecP384r1 + FrodoKEM-1344",
     "mode": "Adaptive_Switch",
-    "mean_ms": 40.598985,
-    "p50_ms": 40.276987,
-    "p95_ms": 41.480621,
-    "p99_ms": 49.450623
+    "mean_ms": 9.392341,
+    "p50_ms": 9.270624,
+    "p95_ms": 9.809891,
+    "p99_ms": 13.173038
   },
   {
     "cipher_suite": "Hybrid: SecP384r1 + BIKE-L5",
     "mode": "Strict_Sequential",
-    "mean_ms": 21.391006,
-    "p50_ms": 21.208487,
-    "p95_ms": 22.036160,
-    "p99_ms": 24.699760
+    "mean_ms": 13.886315,
+    "p50_ms": 13.735939,
+    "p95_ms": 14.593672,
+    "p99_ms": 17.176456
   },
   {
     "cipher_suite": "Hybrid: SecP384r1 + BIKE-L5",
     "mode": "Strict_Parallel",
-    "mean_ms": 21.463858,
-    "p50_ms": 21.187574,
-    "p95_ms": 22.192263,
-    "p99_ms": 28.886791
+    "mean_ms": 13.590725,
+    "p50_ms": 13.466673,
+    "p95_ms": 14.234940,
+    "p99_ms": 15.984158
   },
   {
     "cipher_suite": "Hybrid: SecP384r1 + BIKE-L5",
     "mode": "Adaptive_Switch",
-    "mean_ms": 21.364858,
-    "p50_ms": 21.168858,
-    "p95_ms": 22.068075,
-    "p99_ms": 24.678242
+    "mean_ms": 13.514193,
+    "p50_ms": 13.472357,
+    "p95_ms": 13.845194,
+    "p99_ms": 14.367214
   }
 ]

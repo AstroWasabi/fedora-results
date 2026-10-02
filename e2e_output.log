@@ -2,6 +2,7 @@
 ═══════════════════════════════════════════════════════════════
   End-to-End TLS 1.3 Hybrid PQC Benchmark
   Adaptive Dispatch Runtime — Network Handshake Edition
+  Server Execution: Always Sequential
 ═══════════════════════════════════════════════════════════════
   Server:     127.0.0.1:4444
   Iterations: 1000
@@ -13,21 +14,21 @@
 ═══════════════════════════════════════════════════════════════
   Cipher Suite:     Hybrid: X25519 + ML-KEM-768
   KDF:              sha256
-  Adaptive Route:   Parallel
+  Adaptive Route:   Sequential
   Iterations:       1000
 ═══════════════════════════════════════════════════════════════
 
-  [Strict_Sequential] Running 1000 handshakes... done (mean: 2.5048 ms)
-  [Strict_Parallel] Running 1000 handshakes... done (mean: 2.5860 ms)
-  [Adaptive_Switch] Running 1000 handshakes... done (mean: 2.5734 ms)
+  [Strict_Sequential] Running 1000 handshakes... done (mean: 0.4778 ms)
+  [Strict_Parallel] Running 1000 handshakes... done (mean: 0.5777 ms)
+  [Adaptive_Switch] Running 1000 handshakes... done (mean: 0.5617 ms)
 
 ### Hybrid: X25519 + ML-KEM-768 — E2E Latency Distribution (ms)
 
 | Mode               | Mean       | p50        | p95        | p99        |
 |:-------------------|:-----------|:-----------|:-----------|:-----------|
-| Strict_Sequential  |     2.5048 |     2.4846 |     2.6380 |     3.0961 |
-| Strict_Parallel    |     2.5860 |     2.5563 |     2.7625 |     3.2367 |
-| Adaptive_Switch    |     2.5734 |     2.5552 |     2.7475 |     3.3699 |
+| Strict_Sequential  |     0.4778 |     0.4658 |     0.5004 |     0.6612 |
+| Strict_Parallel    |     0.5777 |     0.5742 |     0.6238 |     0.7316 |
+| Adaptive_Switch    |     0.5617 |     0.5630 |     0.6069 |     0.6348 |
 
 ═══════════════════════════════════════════════════════════════
   Cipher Suite:     Hybrid: SecP256r1 + ML-KEM-768
@@ -36,17 +37,17 @@
   Iterations:       1000
 ═══════════════════════════════════════════════════════════════
 
-  [Strict_Sequential] Running 1000 handshakes... done (mean: 3.0018 ms)
-  [Strict_Parallel] Running 1000 handshakes... done (mean: 2.9808 ms)
-  [Adaptive_Switch] Running 1000 handshakes... done (mean: 2.9725 ms)
+  [Strict_Sequential] Running 1000 handshakes... done (mean: 0.9330 ms)
+  [Strict_Parallel] Running 1000 handshakes... done (mean: 0.9381 ms)
+  [Adaptive_Switch] Running 1000 handshakes... done (mean: 0.9207 ms)
 
 ### Hybrid: SecP256r1 + ML-KEM-768 — E2E Latency Distribution (ms)
 
 | Mode               | Mean       | p50        | p95        | p99        |
 |:-------------------|:-----------|:-----------|:-----------|:-----------|
-| Strict_Sequential  |     3.0018 |     2.9340 |     3.6104 |     4.3006 |
-| Strict_Parallel    |     2.9808 |     2.9539 |     3.1791 |     3.7069 |
-| Adaptive_Switch    |     2.9725 |     2.9268 |     3.0943 |     4.3115 |
+| Strict_Sequential  |     0.9330 |     0.9156 |     0.9982 |     1.4449 |
+| Strict_Parallel    |     0.9381 |     0.9187 |     1.0101 |     1.4907 |
+| Adaptive_Switch    |     0.9207 |     0.9175 |     0.9791 |     1.0006 |
 
 ═══════════════════════════════════════════════════════════════
   Cipher Suite:     Hybrid: SecP384r1 + ML-KEM-1024
@@ -55,17 +56,17 @@
   Iterations:       1000
 ═══════════════════════════════════════════════════════════════
 
-  [Strict_Sequential] Running 1000 handshakes... done (mean: 6.2316 ms)
-  [Strict_Parallel] Running 1000 handshakes... done (mean: 6.2044 ms)
-  [Adaptive_Switch] Running 1000 handshakes... done (mean: 6.2051 ms)
+  [Strict_Sequential] Running 1000 handshakes... done (mean: 3.5206 ms)
+  [Strict_Parallel] Running 1000 handshakes... done (mean: 3.4853 ms)
+  [Adaptive_Switch] Running 1000 handshakes... done (mean: 3.4908 ms)
 
 ### Hybrid: SecP384r1 + ML-KEM-1024 — E2E Latency Distribution (ms)
 
 | Mode               | Mean       | p50        | p95        | p99        |
 |:-------------------|:-----------|:-----------|:-----------|:-----------|
-| Strict_Sequential  |     6.2316 |     6.1426 |     6.6623 |     8.3057 |
-| Strict_Parallel    |     6.2044 |     6.1297 |     6.5942 |     8.0247 |
-| Adaptive_Switch    |     6.2051 |     6.1268 |     6.6241 |     8.0988 |
+| Strict_Sequential  |     3.5206 |     3.4827 |     3.6062 |     4.9157 |
+| Strict_Parallel    |     3.4853 |     3.4933 |     3.5719 |     3.9056 |
+| Adaptive_Switch    |     3.4908 |     3.4941 |     3.6068 |     3.8878 |
 
 ═══════════════════════════════════════════════════════════════
   Cipher Suite:     Hybrid: SecP384r1 + FrodoKEM-1344
@@ -74,17 +75,17 @@
   Iterations:       1000
 ═══════════════════════════════════════════════════════════════
 
-  [Strict_Sequential] Running 1000 handshakes... done (mean: 41.7593 ms)
-  [Strict_Parallel] Running 1000 handshakes... done (mean: 40.6210 ms)
-  [Adaptive_Switch] Running 1000 handshakes... done (mean: 40.5990 ms)
+  [Strict_Sequential] Running 1000 handshakes... done (mean: 10.3807 ms)
+  [Strict_Parallel] Running 1000 handshakes... done (mean: 9.3132 ms)
+  [Adaptive_Switch] Running 1000 handshakes... done (mean: 9.3923 ms)
 
 ### Hybrid: SecP384r1 + FrodoKEM-1344 — E2E Latency Distribution (ms)
 
 | Mode               | Mean       | p50        | p95        | p99        |
 |:-------------------|:-----------|:-----------|:-----------|:-----------|
-| Strict_Sequential  |    41.7593 |    41.3817 |    42.8628 |    51.8509 |
-| Strict_Parallel    |    40.6210 |    40.2402 |    41.7491 |    48.9709 |
-| Adaptive_Switch    |    40.5990 |    40.2770 |    41.4806 |    49.4506 |
+| Strict_Sequential  |    10.3807 |    10.3402 |    10.7018 |    11.0374 |
+| Strict_Parallel    |     9.3132 |     9.2632 |     9.6760 |    10.2281 |
+| Adaptive_Switch    |     9.3923 |     9.2706 |     9.8099 |    13.1730 |
 
 ═══════════════════════════════════════════════════════════════
   Cipher Suite:     Hybrid: SecP384r1 + BIKE-L5
@@ -93,17 +94,17 @@
   Iterations:       1000
 ═══════════════════════════════════════════════════════════════
 
-  [Strict_Sequential] Running 1000 handshakes... done (mean: 21.3910 ms)
-  [Strict_Parallel] Running 1000 handshakes... done (mean: 21.4639 ms)
-  [Adaptive_Switch] Running 1000 handshakes... done (mean: 21.3649 ms)
+  [Strict_Sequential] Running 1000 handshakes... done (mean: 13.8863 ms)
+  [Strict_Parallel] Running 1000 handshakes... done (mean: 13.5907 ms)
+  [Adaptive_Switch] Running 1000 handshakes... done (mean: 13.5142 ms)
 
 ### Hybrid: SecP384r1 + BIKE-L5 — E2E Latency Distribution (ms)
 
 | Mode               | Mean       | p50        | p95        | p99        |
 |:-------------------|:-----------|:-----------|:-----------|:-----------|
-| Strict_Sequential  |    21.3910 |    21.2085 |    22.0362 |    24.6998 |
-| Strict_Parallel    |    21.4639 |    21.1876 |    22.1923 |    28.8868 |
-| Adaptive_Switch    |    21.3649 |    21.1689 |    22.0681 |    24.6782 |
+| Strict_Sequential  |    13.8863 |    13.7359 |    14.5937 |    17.1765 |
+| Strict_Parallel    |    13.5907 |    13.4667 |    14.2349 |    15.9842 |
+| Adaptive_Switch    |    13.5142 |    13.4724 |    13.8452 |    14.3672 |
 
 [✔] Results exported → e2e_benchmark_results.json
 
